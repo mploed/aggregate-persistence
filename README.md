@@ -1,4 +1,4 @@
-# Test Project for DDD Europse Hands-On
+# Test Project for DDD Europe Hands-On
 
 There is a blog post outlining the pros and cons of each approach here: https://www.michael-ploed.com/blog/persistence-strategies-for-aggregates-at-ddd-europe-2025
 
