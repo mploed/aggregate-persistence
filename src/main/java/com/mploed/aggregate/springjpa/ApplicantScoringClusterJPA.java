@@ -1,9 +1,6 @@
 package com.mploed.aggregate.springjpa;
 
-import jakarta.persistence.Embedded;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import org.jmolecules.ddd.annotation.AggregateRoot;
 
 import java.math.BigDecimal;
@@ -12,6 +9,7 @@ import java.util.Objects;
 
 @AggregateRoot
 @Entity
+@Table(name = "applicant_scoring_cluster_jpa")
 public class ApplicantScoringClusterJPA {
     @Id
     @GeneratedValue

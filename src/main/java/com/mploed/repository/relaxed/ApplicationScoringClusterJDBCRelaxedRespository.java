@@ -19,7 +19,7 @@ public class ApplicationScoringClusterJDBCRelaxedRespository {
     }
     @Transactional(propagation = Propagation.REQUIRES_NEW)
     public void save(ApplicantScoringClusterRelaxed applicantScoringCluster) {
-        String sql = "INSERT INTO scoring_applicant_cluster (application_number, city, balance_at_bank) " +
+        String sql = "INSERT INTO scoring_applicant_cluster_relaxed (application_number, city, balance_at_bank) " +
                 "VALUES (?, ?, ?)";
 
         jdbcTemplate.update(sql,
@@ -31,7 +31,7 @@ public class ApplicationScoringClusterJDBCRelaxedRespository {
 
     @Transactional(propagation = Propagation.REQUIRES_NEW)
     public ApplicantScoringClusterRelaxed load(ApplicationNumberRelaxed applicationNumber) {
-        String sql = "SELECT application_number, city, balance_at_bank FROM scoring_applicant_cluster WHERE application_number = ?";
+        String sql = "SELECT application_number, city, balance_at_bank FROM scoring_applicant_cluster_relaxed WHERE application_number = ?";
         ApplicantScoringClusterRelaxed result = null;
         return jdbcTemplate.query(sql, new Object[]{applicationNumber.nummer()}, rs -> {
             if (rs.next()) {

@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:scoringdb
+    url: jdbc:h2:mem:testdb-${random.uuid};DB_CLOSE_DELAY=-1
     driver-class-name: org.h2.Driver
     username: sa
     password: test

@@ -6,7 +6,7 @@ import org.springframework.data.annotation.Version;
 import org.springframework.data.relational.core.mapping.Embedded;
 import org.springframework.data.relational.core.mapping.Table;
 
-@Table("SCORING_APPLICANT_CLUSTER")
+@Table("SCORING_APPLICANT_CLUSTER_SPRING_JDBC")
 public class ApplicationScoringClusterRecord {
     @Id
     private Long id;
